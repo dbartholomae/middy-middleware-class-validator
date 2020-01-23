@@ -1,7 +1,7 @@
 {
-  "name": "middy-middleware-json-error-handler",
+  "name": "middy-middleware-class-validator",
   "version": "0.0.0",
-  "description": "A middy JSON error handler middleware.",
+  "description": "A middy validation middleware using class-validator.",
   "homepage": "",
   "license": "MIT",
   "author": {
@@ -16,9 +16,8 @@
   "keywords": [
     "middy",
     "middleware",
-    "error",
-    "http",
-    "json"
+    "validation",
+    "validator"
   ],
   "types": "lib/index.d.ts",
   "engines": {
@@ -27,8 +26,7 @@
   "private": false,
   "dependencies": {
     "@types/debug": ">=4.1.0",
-    "debug": ">=4.1.0",
-    "serialize-error": ">=5.0.0"
+    "debug": ">=4.1.0"
   },
   "peerDependencies": {
     "middy": ">=0.22.0"
@@ -89,5 +87,5 @@
     "wait-on": "^3.2.0",
     "webpack": "^4.37.0"
   },
-  "repository": "git@github.com:dbartholomae/middy-middleware-json-error-handler.git"
+  "repository": "git@github.com:dbartholomae/middy-middleware-class-validator.git"
 }
