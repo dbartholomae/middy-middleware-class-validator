@@ -1,4 +1,4 @@
-type ClassType<T> = new (...args: any[]) => T
+import { ClassType } from 'class-transformer-validator'
 
 export interface IMiddlewareOptions<T extends object> {
   classType: ClassType<T>

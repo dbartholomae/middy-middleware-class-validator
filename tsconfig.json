@@ -4,7 +4,7 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "es5",
-    "lib": ["es6", "dom", "es2015.promise"],
+    "lib": ["es2017"],
     "sourceMap": false,
     "jsx": "react",
     "moduleResolution": "node",

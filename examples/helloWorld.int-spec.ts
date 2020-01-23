@@ -1,24 +1,30 @@
 import request from 'supertest'
+
 const server = request('http://localhost:3000')
 
-describe('Handler with JSON error handler middleware', () => {
-  describe('with a search query method', () => {
-    const query = '/hello?search=x'
-    it('returns 500 and JSON with an Internal server error message', async () => {
+describe('Handler with class validator middleware', () => {
+  describe('with valid input', () => {
+    it('returns 200', async () => {
       const response = await server
-        .get(query)
-        .expect(500)
-      expect(response.body.message).toEqual('Internal server error')
+        .post('/hello')
+        .send({
+          firstName: 'John',
+          lastName: 'Doe'
+        })
+        .expect(200)
+      expect(response.text).toEqual('Hello John Doe')
     })
   })
 
-  describe('without a search query method', () => {
-    const query = '/hello'
-    it('returns 400 and JSON with a "Query has to include a search" error message', async () => {
+  describe('with invalid input', () => {
+    it('returns 400 and the validation error', async () => {
       const response = await server
-        .get(query)
+        .post('/hello')
+        .send({
+          firstName: 'John'
+        })
         .expect(400)
-      expect(response.body.message).toEqual('Query has to include a search')
+      expect(JSON.stringify(response.body)).toContain('lastName must be a string')
     })
   })
 })

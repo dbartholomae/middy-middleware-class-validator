@@ -1,9 +1,10 @@
 import { IMiddlewareOptions, isMiddlewareOptions } from './IMiddlewareOptions'
 
+class Validator {}
+
 describe('IMiddlewareOptions', () => {
   describe('interface', () => {
     it('accepts valid options', () => {
-      class Validator {}
       const options: IMiddlewareOptions<Validator> = {
         classType: Validator
       }
@@ -13,7 +14,6 @@ describe('IMiddlewareOptions', () => {
 
   describe('type guard', () => {
     it('accepts valid options',() => {
-      class Validator {}
       const options = {
         classType: Validator
       }
