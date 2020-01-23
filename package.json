@@ -1,6 +1,6 @@
 {
   "name": "middy-middleware-class-validator",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A middy validation middleware using class-validator.",
   "homepage": "",
   "license": "MIT",
