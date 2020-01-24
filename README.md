@@ -56,4 +56,5 @@ export const handler = middy(helloWorld)
   }))
   // The class validator throws validation errors from http-errors which are compatible with
   // the error handler middlewares for middy
-  .use(JSONErrorHandlerMiddleware())```
+  .use(JSONErrorHandlerMiddleware())
+```
