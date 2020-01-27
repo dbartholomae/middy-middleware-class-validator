@@ -57,7 +57,7 @@
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/commit-analyzer": "^7.0.0",
     "@semantic-release/git": "^8.0.0",
-    "@semantic-release/npm": "^6.0.0",
+    "@semantic-release/npm": "^7.0.0",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "@types/jest": "^24.0.6",
     "@types/supertest": "^2.0.7",
