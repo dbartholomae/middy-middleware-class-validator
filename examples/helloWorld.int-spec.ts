@@ -1,6 +1,6 @@
 import request from 'supertest'
 
-const server = request('http://localhost:3000')
+const server = request('http://localhost:3000/dev')
 
 describe('Handler with class validator middleware', () => {
   describe('with valid input', () => {
