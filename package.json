@@ -29,7 +29,8 @@
     "class-transformer": ">=0.2.3",
     "class-transformer-validator": ">=0.8.0",
     "class-validator": ">=0.11.0",
-    "debug": ">=4.1.0"
+    "debug": ">=4.1.0",
+    "snyk": "^1.305.0"
   },
   "peerDependencies": {
     "middy": ">=0.22.0"
@@ -49,7 +50,9 @@
     "test:unit": "jest",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
-    "precommit:lint:fix": "tslint --project tsconfig.json --fix"
+    "precommit:lint:fix": "tslint --project tsconfig.json --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
@@ -92,5 +95,6 @@
     "wait-on": "^4.0.0",
     "webpack": "^4.37.0"
   },
-  "repository": "git@github.com:dbartholomae/middy-middleware-class-validator.git"
+  "repository": "git@github.com:dbartholomae/middy-middleware-class-validator.git",
+  "snyk": true
 }
