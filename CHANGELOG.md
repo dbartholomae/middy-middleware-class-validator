@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.0...1.0.1) (2020-04-16)
+
+
+### Bug Fixes
+
+* make snyk a dev dependency ([c6ee682](https://github.com/dbartholomae/middy-middleware-class-validator/commit/c6ee6827809c1cb6002a0eaa3200a055807a05cc))
+* package.json & .snyk to reduce vulnerabilities ([3b1ee0c](https://github.com/dbartholomae/middy-middleware-class-validator/commit/3b1ee0c6f4b756805ec23febcac29467ea30528e))
+* package.json & .snyk to reduce vulnerabilities ([3e77268](https://github.com/dbartholomae/middy-middleware-class-validator/commit/3e772685ab3056b454c27ee69e2561854ad3074d))
+
 # 1.0.0 (2020-01-23)
 
 
