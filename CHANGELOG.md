@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.1...1.0.2) (2020-04-17)
+
+
+### Bug Fixes
+
+* upgrade middy from 0.34.0 to 0.36.0 ([1106029](https://github.com/dbartholomae/middy-middleware-class-validator/commit/11060295641bf0b7e13f0da4e8f2a36830ead478))
+
 ## [1.0.1](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.0...1.0.1) (2020-04-16)
 
 
