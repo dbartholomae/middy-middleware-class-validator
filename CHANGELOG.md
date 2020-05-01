@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.2...1.0.3) (2020-05-01)
+
+
+### Bug Fixes
+
+* package.json & .snyk to reduce vulnerabilities ([ec7b0b2](https://github.com/dbartholomae/middy-middleware-class-validator/commit/ec7b0b2e74fe1a5ccc8ed529f2be3f09fddaf8c7))
+* package.json & .snyk to reduce vulnerabilities ([77a2c56](https://github.com/dbartholomae/middy-middleware-class-validator/commit/77a2c564e1e50696d600d11cf3c8e83e5c7d890e))
+
 ## [1.0.2](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.1...1.0.2) (2020-04-17)
 
 
