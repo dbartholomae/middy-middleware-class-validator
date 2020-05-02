@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.3...2.0.0) (2020-05-02)
+
+
+### Features
+
+* update to middy 1.0.0 ([ca57f9a](https://github.com/dbartholomae/middy-middleware-class-validator/commit/ca57f9a1b70c29ba9568348295194abf9a19d8da))
+
+
+### BREAKING CHANGES
+
+* As of this version this middleware only supports middy@1.0.0 and upwards. See https://github.com/middyjs/middy/blob/master/UPGRADE.md for middy upgrade instructions.
+
 ## [1.0.3](https://github.com/dbartholomae/middy-middleware-class-validator/compare/1.0.2...1.0.3) (2020-05-01)
 
 

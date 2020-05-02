@@ -86,7 +86,7 @@
 
 <span class="hljs-keyword">import</span> { APIGatewayProxyEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'aws-lambda'</span>
 <span class="hljs-keyword">import</span> { IsString } <span class="hljs-keyword">from</span> <span class="hljs-string">'class-validator'</span>
-<span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">'middy'</span>
+<span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">'@middy/core'</span>
 <span class="hljs-keyword">import</span> JSONErrorHandlerMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-json-error-handler'</span>
 
 <span class="hljs-keyword">import</span> ClassValidatorMiddleware, { WithBody } <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-class-validator'</span>
