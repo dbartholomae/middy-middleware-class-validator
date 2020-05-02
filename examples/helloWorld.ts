@@ -3,7 +3,7 @@ import 'reflect-metadata'
 
 import { APIGatewayProxyEvent } from 'aws-lambda'
 import { IsString } from 'class-validator'
-import middy from 'middy'
+import middy from '@middy/core'
 import JSONErrorHandlerMiddleware from 'middy-middleware-json-error-handler'
 import ClassValidatorMiddleware, { WithBody } from '../'
 
