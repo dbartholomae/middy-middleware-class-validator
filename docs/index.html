@@ -81,15 +81,15 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-comment">// When using decorators, don't forget to import this in the very first line of code</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">'reflect-metadata'</span>
+				<pre><code class="language-typescript"><span class="hljs-comment">// When using decorators, don&#x27;t forget to import this in the very first line of code</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;reflect-metadata&#x27;</span>
 
-<span class="hljs-keyword">import</span> { APIGatewayProxyEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">'aws-lambda'</span>
-<span class="hljs-keyword">import</span> { IsString } <span class="hljs-keyword">from</span> <span class="hljs-string">'class-validator'</span>
-<span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">'@middy/core'</span>
-<span class="hljs-keyword">import</span> JSONErrorHandlerMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-json-error-handler'</span>
+<span class="hljs-keyword">import</span> { APIGatewayProxyEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;aws-lambda&#x27;</span>
+<span class="hljs-keyword">import</span> { IsString } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;class-validator&#x27;</span>
+<span class="hljs-keyword">import</span> middy <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@middy/core&#x27;</span>
+<span class="hljs-keyword">import</span> JSONErrorHandlerMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;middy-middleware-json-error-handler&#x27;</span>
 
-<span class="hljs-keyword">import</span> ClassValidatorMiddleware, { WithBody } <span class="hljs-keyword">from</span> <span class="hljs-string">'middy-middleware-class-validator'</span>
+<span class="hljs-keyword">import</span> ClassValidatorMiddleware, { WithBody } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;middy-middleware-class-validator&#x27;</span>
 
 <span class="hljs-comment">// Define a validator for the body via class-validator</span>
 <span class="hljs-keyword">class</span> NameBody {
@@ -106,13 +106,13 @@
   <span class="hljs-keyword">return</span> {
     body: <span class="hljs-string">`Hello <span class="hljs-subst">${event.body.firstName}</span> <span class="hljs-subst">${event.body.lastName}</span>`</span>,
     headers: {
-      <span class="hljs-string">'content-type'</span>: <span class="hljs-string">'text'</span>
+      <span class="hljs-string">&#x27;content-type&#x27;</span>: <span class="hljs-string">&#x27;text&#x27;</span>
     },
     statusCode: <span class="hljs-number">200</span>
   }
 }
 
-<span class="hljs-comment">// Let's "middyfy" our handler, then we will be able to attach middlewares to it</span>
+<span class="hljs-comment">// Let&#x27;s &quot;middyfy&quot; our handler, then we will be able to attach middlewares to it</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> handler = middy(helloWorld)
   .use(ClassValidatorMiddleware({
     <span class="hljs-comment">// Add the validation class here</span>
