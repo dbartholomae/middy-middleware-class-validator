@@ -5,10 +5,10 @@ import { IsString } from "class-validator";
 
 class NameBody {
   @IsString()
-  public firstName: string;
+  public firstName!: string;
 
   @IsString()
-  public lastName: string;
+  public lastName!: string;
 }
 
 describe("ClassValidatorMiddleware", () => {
@@ -20,17 +20,17 @@ describe("ClassValidatorMiddleware", () => {
       });
 
       it("sets the body to the transformed and validated value", async () => {
-        const next = jest.fn();
         const handler = {
           callback: jest.fn(),
           context: {} as Context,
           error: {} as Error,
           event: { body },
+          internal: {},
           response: {},
         };
         await classValidatorMiddleware({
           classType: NameBody,
-        }).before(handler, next);
+        }).before(handler);
         expect(handler.event.body).toEqual({
           firstName: "John",
           lastName: "Doe",
@@ -44,18 +44,18 @@ describe("ClassValidatorMiddleware", () => {
       });
 
       it("throws an error with statusCode 400", async () => {
-        const next = jest.fn();
         const handler = {
           callback: jest.fn(),
           context: {} as Context,
           error: {} as Error,
+          internal: {},
           event: { body },
           response: {},
         };
         await expect(
           classValidatorMiddleware({
             classType: NameBody,
-          }).before(handler, next),
+          }).before(handler),
         ).rejects.toMatchObject({
           statusCode: 400,
         });

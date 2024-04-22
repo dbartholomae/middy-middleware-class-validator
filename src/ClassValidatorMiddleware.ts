@@ -9,7 +9,7 @@ import { IMiddlewareOptions } from "./interfaces/IMiddlewareOptions";
 
 /** The actual middleware */
 export class ClassValidatorMiddleware<T extends object>
-  implements middy.MiddlewareObject<any, any, any>
+  implements middy.MiddlewareObj<any, any, any>
 {
   public static create<S extends object>(
     options: IMiddlewareOptions<S>,
@@ -29,8 +29,8 @@ export class ClassValidatorMiddleware<T extends object>
     this.classType = options.classType;
   }
 
-  public before: middy.MiddlewareFunction<any, any> = async (
-    handler: middy.HandlerLambda,
+  public before: middy.MiddlewareFn<any, any> = async (
+    handler: middy.Request,
   ) => {
     try {
       const transformedBody = await transformAndValidate(
@@ -39,7 +39,7 @@ export class ClassValidatorMiddleware<T extends object>
       );
       handler.event.body = transformedBody;
     } catch (error) {
-      error.statusCode = 400;
+      (error as any).statusCode = 400;
       throw error;
     }
   };

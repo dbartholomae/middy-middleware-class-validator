@@ -10,10 +10,10 @@ import ClassValidatorMiddleware, { WithBody } from "../";
 // Define a validator for the body via class-validator
 class NameBody {
   @IsString()
-  public firstName: string;
+  public firstName!: string;
 
   @IsString()
-  public lastName: string;
+  public lastName!: string;
 }
 
 // This is your AWS handler
