@@ -50,7 +50,6 @@
     "test:unit": "jest",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
-    "precommit:lint:fix": "tslint --project tsconfig.json --fix",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -71,10 +70,8 @@
     "concurrently": "^5.0.0",
     "cross-env": "^7.0.0",
     "http-errors": "^1.7.3",
-    "husky": "^4.2.1",
     "jest": "^25.1.0",
     "jest-junit": "^10.0.0",
-    "lint-staged": "^10.0.2",
     "middy-middleware-json-error-handler": "^2.0.0",
     "pkg-ok": "^2.3.1",
     "prettier-standard": "^16.0.0",
