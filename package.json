@@ -64,8 +64,6 @@
     "@types/aws-lambda": "^8.10.137",
     "@types/jest": "^29.5.12",
     "@types/supertest": "^6.0.2",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.1",
     "aws-lambda": "*",
     "codecov": "^3.8.3",
     "concurrently": "^8.2.2",
@@ -88,6 +86,7 @@
     "ts-loader": "^9.5.1",
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1",
     "wait-on": "^7.2.0",
     "webpack": "^5.91.0"
   },
