@@ -1,3 +1,25 @@
+# [3.0.0](https://github.com/dbartholomae/middy-middleware-class-validator/compare/2.0.2...3.0.0) (2024-04-22)
+
+
+### Bug Fixes
+
+* adapt to new TypeScript and Middy versions ([8330e7a](https://github.com/dbartholomae/middy-middleware-class-validator/commit/8330e7af0391ab3fbd456e86f80355cab2e4314a))
+* fix WithBody type ([c10884e](https://github.com/dbartholomae/middy-middleware-class-validator/commit/c10884ea9a330213e0bedf2081b1c666e825516b))
+
+
+### chore
+
+* update all the dependencies ([f3325ca](https://github.com/dbartholomae/middy-middleware-class-validator/commit/f3325ca4106e50ff2e0f53c485706c9bc1ca60c9))
+
+
+### BREAKING CHANGES
+
+* This library now works with
+middy version 2 which changed some of the types.
+If you don't use types, you might not need to change
+anything. Follow the
+[the middy upgrade guide](https://github.com/middyjs/middy/blob/2.0.0/docs/UPGRADE.md).
+
 ## [2.0.2](https://github.com/dbartholomae/middy-middleware-class-validator/compare/2.0.1...2.0.2) (2020-06-20)
 
 ### Bug Fixes
