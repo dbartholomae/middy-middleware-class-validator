@@ -117,6 +117,9 @@ importers:
       ts-loader:
         specifier: ^9.5.1
         version: 9.5.1(typescript@5.4.5)(webpack@5.91.0)
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
       typedoc:
         specifier: ^0.25.13
         version: 0.25.13(typescript@5.4.5)
