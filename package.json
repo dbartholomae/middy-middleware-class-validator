@@ -84,6 +84,7 @@
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
+    "tslib": "^2.6.2",
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.1",
