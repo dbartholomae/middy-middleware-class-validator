@@ -29,8 +29,7 @@
     "class-transformer": ">=0.2.3",
     "class-transformer-validator": ">=0.8.0",
     "class-validator": ">=0.11.0",
-    "debug": ">=4.1.0",
-    "snyk": "^1.321.0"
+    "debug": ">=4.1.0"
   },
   "peerDependencies": {
     "@middy/core": ">=1.0.0"
@@ -51,9 +50,7 @@
     "check-style": "prettier --check .",
     "fix-style": "prettier --write .",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "lint:fix": "eslint src --fix"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.0",
@@ -95,6 +92,5 @@
     "wait-on": "^4.0.0",
     "webpack": "^4.37.0"
   },
-  "repository": "git@github.com:dbartholomae/middy-middleware-class-validator.git",
-  "snyk": true
+  "repository": "git@github.com:dbartholomae/middy-middleware-class-validator.git"
 }
