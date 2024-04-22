@@ -46,3 +46,5 @@ export class ClassValidatorMiddleware<T extends object>
 }
 
 export default ClassValidatorMiddleware.create;
+
+export type WithBody<T, B> = Omit<T, "body"> & { body: B };
