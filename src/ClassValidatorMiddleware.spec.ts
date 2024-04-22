@@ -1,63 +1,65 @@
-import classValidatorMiddleware from './ClassValidatorMiddleware'
+import classValidatorMiddleware from "./ClassValidatorMiddleware";
 
-import { Context } from 'aws-lambda'
-import { IsString } from 'class-validator'
+import { Context } from "aws-lambda";
+import { IsString } from "class-validator";
 
 class NameBody {
   @IsString()
-  public firstName: string
+  public firstName: string;
 
   @IsString()
-  public lastName: string
+  public lastName: string;
 }
 
-describe('ClassValidatorMiddleware', () => {
-  describe('before hook', () => {
-    describe('with valid input', () => {
+describe("ClassValidatorMiddleware", () => {
+  describe("before hook", () => {
+    describe("with valid input", () => {
       const body = JSON.stringify({
-        firstName: 'John',
-        lastName: 'Doe'
-      })
+        firstName: "John",
+        lastName: "Doe",
+      });
 
-      it('sets the body to the transformed and validated value', async () => {
-        const next = jest.fn()
+      it("sets the body to the transformed and validated value", async () => {
+        const next = jest.fn();
         const handler = {
           callback: jest.fn(),
           context: {} as Context,
           error: {} as Error,
           event: { body },
-          response: {}
-        }
+          response: {},
+        };
         await classValidatorMiddleware({
-          classType: NameBody
-        }).before(handler, next)
+          classType: NameBody,
+        }).before(handler, next);
         expect(handler.event.body).toEqual({
-          firstName: 'John',
-          lastName: 'Doe'
-        })
-      })
-    })
+          firstName: "John",
+          lastName: "Doe",
+        });
+      });
+    });
 
-    describe('with invalid input', () => {
+    describe("with invalid input", () => {
       const body = JSON.stringify({
-        firstName: 'John'
-      })
+        firstName: "John",
+      });
 
-      it('throws an error with statusCode 400', async () => {
-        const next = jest.fn()
+      it("throws an error with statusCode 400", async () => {
+        const next = jest.fn();
         const handler = {
           callback: jest.fn(),
           context: {} as Context,
           error: {} as Error,
           event: { body },
-          response: {}
-        }
-        await expect(classValidatorMiddleware({
-          classType: NameBody
-        }).before(handler, next)).rejects.toMatchObject({
-          statusCode: 400
-        })
-      })
-    })
-  })
-})
+          response: {},
+        };
+        await expect(
+          classValidatorMiddleware({
+            classType: NameBody,
+          }).before(handler, next),
+        ).rejects.toMatchObject({
+          statusCode: 400,
+        });
+      });
+    });
+  });
+});
