@@ -1,5 +1,4 @@
-service:
-  name: test-microservice
+service: test-microservice
 
 plugins:
   - serverless-webpack
@@ -7,7 +6,9 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs20.x
+  httpApi:
+    payload: "2.0"
 
 functions:
   hello:
@@ -15,11 +16,11 @@ functions:
     events:
       - http:
           method: post
-          path: hello
+          path: /hello
 
   status:
     handler: handler.status
     events:
       - http:
           method: get
-          path: status
+          path: /status
